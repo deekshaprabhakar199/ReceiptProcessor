@@ -45,23 +45,29 @@ Docker installed
 
 1. Clone the GitHub Repository:
 
-'''
+```
 git clone https://github.com/deekshaprabhakar199/ReceiptProcessor.git
+
 cd FetchRewardsApplication
-'''
+```
 
 2. Build the JAR file:
 
+```
 mvn clean package
+```
 
 2. Build the Docker image:
 
+```
 docker build -t receipt-processor-app .
+```
 
 3. Run the Docker container:
 
+```
 docker run -p 8080:8080 receipt-processor-app
-
+```
 
 The application will be accessible at http://localhost:8080.
 
@@ -73,10 +79,7 @@ To process a receipt, send a POST request to /receipts/process with a JSON paylo
 
 Example:
 
-curl -X POST -H "Content-Type: application/json" -d @example-receipt.json http://localhost:8080/receipts/process
-
-OR
-
+```
 curl -X POST -H "Content-Type: application/json" -d '{
   "retailer": "Target",
   "purchaseDate": "2022-01-01",
@@ -101,17 +104,24 @@ curl -X POST -H "Content-Type: application/json" -d '{
   ],
   "total": "35.35"
 }' http://localhost:8080/receipts/process
+```
 
+2. Getting Points for a Receipt
 
-Getting Points for a Receipt
-To get points for a receipt, send a GET request to /receipts/{id}/points where {id} is the receipt ID generated during processing. Example:
+To get points for a receipt, send a GET request to /receipts/{id}/points where {id} is the receipt ID generated during processing. 
 
+Example:
+
+```
 curl http://localhost:8080/receipts/{id}/points
+```
 
 
-Writing Tests
+# Writing Tests
+
 Tests are written using JUnit 5. The ReceiptControllerTest class demonstrates how to write unit tests for the ReceiptController class. The tests cover various scenarios, including successful receipt processing, handling exceptions, and checking response codes.
 
-Why DTO?
+# Why DTO?
+
 DTOs (Data Transfer Objects) are used to represent data exchanged between different layers of the application. They help in decoupling the internal representation of data from the external representation, making the application more maintainable and scalable. DTOs are particularly useful in API development, allowing for clear communication between the client and server.
 
