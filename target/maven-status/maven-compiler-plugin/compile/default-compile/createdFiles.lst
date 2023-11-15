@@ -1,0 +1,11 @@
+com/example/receiptprocessor/model/Receipt.class
+com/example/receiptprocessor/exception/ReceiptValidationException.class
+com/example/receiptprocessor/service/ReceiptProcessorService.class
+com/example/receiptprocessor/controller/ReceiptController.class
+com/example/receiptprocessor/validator/ReceiptValidator.class
+com/example/receiptprocessor/ReceiptProcessorApplication.class
+com/example/receiptprocessor/model/Item.class
+com/example/receiptprocessor/dto/PointsResponse.class
+com/example/receiptprocessor/exception/ReceiptNotFoundException.class
+com/example/receiptprocessor/dto/ProcessResponse.class
+com/example/receiptprocessor/dto/ProcessRequest.class
