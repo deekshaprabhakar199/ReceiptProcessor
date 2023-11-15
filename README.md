@@ -71,6 +71,18 @@ docker run -p 8080:8080 receipt-processor-app
 
 The application will be accessible at http://localhost:8080.
 
+4. Stopping the Application:
+
+To stop the application, use the following commands:
+
+```
+docker ps  # Get the container ID
+docker stop <container_id>
+```
+
+Replace <container_id> with the actual container ID.
+
+
 # Usage
 
 1. Processing a Receipt
