@@ -45,8 +45,10 @@ Docker installed
 
 1. Clone the GitHub Repository:
 
-'''git clone https://github.com/deekshaprabhakar199/ReceiptProcessor.git
-cd FetchRewardsApplication'''
+'''
+git clone https://github.com/deekshaprabhakar199/ReceiptProcessor.git
+cd FetchRewardsApplication
+'''
 
 2. Build the JAR file:
 
