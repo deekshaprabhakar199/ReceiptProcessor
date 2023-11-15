@@ -1,34 +1,54 @@
 # ReceiptProcessor
 # Overview
-This is a Spring Boot application that processes receipts, calculates points, and provides information about the points associated with a receipt.
+This application processes receipts and calculates points based on specific criteria. It provides RESTful endpoints for receipt processing and points retrieval.
 
-Technologies Used
+Note: We can use Lombok for the model class to reduce boilerplate code, which is represented by comments at the end of the Item and Receipt class.
+
+# Technologies Used:
+
 Java 17: The programming language used for development.
+
 Spring Boot: The framework used for building the application.
+
 Maven: Used for project management and build automation.
+
 Docker: Used for containerization.
+
 JUnit 5: Used for writing tests.
 
 
-Project Structure
+# Project Structure
+
 The project is structured as follows:
 
 
 src/main/java/com/example/receiptprocessor: Contains the main Java source code.
+
 src/main/resources: Contains application properties and other resources.
+
 target: Contains compiled bytecode and packaged JAR files.
+
 Dockerfile: Specifies the instructions to build a Docker image.
 
 
-How to Run the Application
+# How to Run the Application
 
-Prerequisites
+Prerequisites:
+
 Java 17 installed
+
 Maven installed
+
 Docker installed
 
-Steps
-1. Build the JAR file:
+# Steps:
+
+1. Clone the GitHub Repository:
+
+'''git clone https://github.com/deekshaprabhakar199/ReceiptProcessor.git
+cd FetchRewardsApplication'''
+
+2. Build the JAR file:
 
 mvn clean package
 
@@ -43,13 +63,18 @@ docker run -p 8080:8080 receipt-processor-app
 
 The application will be accessible at http://localhost:8080.
 
-Usage
-Processing a Receipt
+# Usage
+
+1. Processing a Receipt
+
 To process a receipt, send a POST request to /receipts/process with a JSON payload containing receipt details. 
 
 Example:
+
 curl -X POST -H "Content-Type: application/json" -d @example-receipt.json http://localhost:8080/receipts/process
+
 OR
+
 curl -X POST -H "Content-Type: application/json" -d '{
   "retailer": "Target",
   "purchaseDate": "2022-01-01",
